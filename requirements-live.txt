@@ -1,0 +1,7 @@
+# Live trading ONLY. Install separately when (and only when) you intend
+# to enable real-money orders:
+#
+#     pip install -r requirements-live.txt
+#
+# Official Polymarket Python SDK (replaces the archived py-clob-client).
+polymarket-client>=0.1

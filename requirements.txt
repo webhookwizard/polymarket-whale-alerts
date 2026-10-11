@@ -1,0 +1,6 @@
+# Runtime (paper mode, watcher, Telegram alerts, web dashboard)
+requests>=2.31
+Flask>=3.0
+
+# Dev / tests
+pytest>=7.0

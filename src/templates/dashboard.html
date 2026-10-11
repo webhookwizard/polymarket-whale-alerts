@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🐋 Whale Alerts — Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🐋 Whale Alerts</h1>
+  <div id="mode-badge" class="badge paper">PAPER</div>
+</header>
+<div id="gate-note" class="note"></div>
+
+<main>
+  <section class="card">
+    <h2>Watcher</h2>
+    <div class="row">
+      <button id="btn-start">▶ Start</button>
+      <button id="btn-stop">⏸ Stop</button>
+      <span id="watcher-state" class="muted"></span>
+    </div>
+    <h3>Rules</h3>
+    <div id="watchers"></div>
+    <h3>Add rule</h3>
+    <div class="row">
+      <input id="w-name" placeholder="name" value="custom">
+      <input id="w-min" type="number" placeholder="min USD" value="10000">
+      <input id="w-pmin" type="number" step="0.01" placeholder="prob min" value="0.05">
+      <input id="w-pmax" type="number" step="0.01" placeholder="prob max" value="0.95">
+      <button id="btn-add-watcher">Add</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Live session</h2>
+    <p class="muted">LIVE orders need the gate (env) <b>and</b> this session toggle.</p>
+    <div class="row">
+      <label><input type="checkbox" id="session-confirm"> I confirm this session may place REAL orders</label>
+      <button id="btn-confirm-session">Apply</button>
+      <span id="session-state" class="muted"></span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Whale feed</h2>
+    <div id="alerts" class="feed"></div>
+  </section>
+
+  <section class="card">
+    <h2>Paper positions</h2>
+    <div id="positions"></div>
+  </section>
+</main>
+
+<div id="confirm-modal" class="modal hidden">
+  <div class="modal-box">
+    <h3>⚠️ Confirm REAL order</h3>
+    <p id="confirm-text"></p>
+    <div class="row">
+      <button id="btn-confirm-order" class="danger">Confirm — spend real money</button>
+      <button id="btn-cancel-order">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
