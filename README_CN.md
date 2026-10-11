@@ -70,6 +70,19 @@ TG_DEFAULT_CHAT_ID=123456789 python3 -m src.bot_cli --mock
 
 **真实公开数据（只读，免费）：** `python3 -m src.watcher_cli`
 
+### 🪟 Windows 用户
+
+Windows 上没有 `python3` 命令，用 `python`。最省事：从 GitHub 把仓库 ZIP 下载下来解压，**双击 `start_dashboard.bat`**（第一次会自动装依赖，然后启动面板），再用浏览器打开 http://127.0.0.1:5000。
+
+手动也一样：
+
+```bat
+pip install -r requirements.txt
+python -m src.webapp
+```
+
+需要先装 [Python](https://www.python.org/downloads/)，安装时勾选 **"Add python.exe to PATH"**。
+
 ## 🔴 实盘模式 —— 先读完这段
 
 这个机器人**真的可以下单**。真钱、真亏损、私钥绝不能泄露。安全护栏不是摆设：

@@ -70,6 +70,19 @@ TG_DEFAULT_CHAT_ID=123456789 python3 -m src.bot_cli --mock
 
 **Live public feed (read-only, still free):** `python3 -m src.watcher_cli`
 
+### 🪟 On Windows
+
+No `python3` on Windows — use `python` instead. Easiest: download the repo ZIP from GitHub, extract it, and **double-click `start_dashboard.bat`** (installs dependencies on first run, then starts the dashboard). Then open http://127.0.0.1:5000 in your browser.
+
+Manual equivalent:
+
+```bat
+pip install -r requirements.txt
+python -m src.webapp
+```
+
+You need [Python](https://www.python.org/downloads/) installed with **"Add python.exe to PATH"** ticked during setup.
+
 ## 🔴 Real-money mode — read this first
 
 This bot **can place real orders** on Polymarket. That means real money, real losses, and a private key that must never leak. The safety rails are not optional:
